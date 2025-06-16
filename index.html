@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Gamer - Explore, Jogue, Compita!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <button class="menu-toggle" aria-label="Abrir menu">
+  <i class="fas fa-bars"></i>
+</button>
+            <a href="#" class="logo">Universo Gamer</a>
+            <nav class="main-nav">
+  <ul class="menu">
+    <li><a href="#">Início</a></li>
+    <li><a href="#games">Jogos</a></li>
+    <li><a href="#">Comunidade</a></li>
+    <li><a href="#tournaments" id="show-tournaments-btn">Torneios</a></li>
+    <li><a href="#footer">Contato</a></li>
+  </ul>
+</nav>
+            <div class="header-buttons">
+                <a href="#" class="btn">Entrar / Criar Conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="main-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Explore o mundo dos jogos de PC</h1>
+                    <p>Descubra, jogue e conecte-se com gamers como você.</p>
+                    <a href="#games" class="cta-button">Comece Agora</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="section">
+            <div class="container">
+                <h2 class="section-title">Destaques de Jogos</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <img src="img/elden.jpg" alt="Capa do jogo Valorant">
+                        <h3>Elden Ring</h3>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/cyber.jpg" alt="Capa do jogo League of Legends">
+                        <h3>Cyber Punk 2077</h3>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/last.jpg" alt="Capa do jogo Elden Ring">
+                        <h3>The Last of Us</h3>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/div.jpg" alt="Capa do jogo Cyberpunk 2077">
+                        <h3>The Division</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2 class="section-title">O que dizem nossos jogadores</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/150?u=gamerx" alt="Avatar do GamerX">
+                        <div class="testimonial-text">
+                            <p>“A melhor plataforma para descobrir novos jogos e fazer amizades!”</p>
+                            <span>– bb@Reborn</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/150?u=noobmaster" alt="Avatar do NoobMaster">
+                        <div class="testimonial-text">
+                            <p>“Interface linda e extremamente fácil de usar. Simplesmente incrível.”</p>
+                            <span>– @NoobMaster</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tournaments" class="section">
+            <div class="container">
+                <h2 class="section-title">Torneios Abertos</h2>
+                <div class="tournaments-grid">
+                    <div class="tournament-card">
+                        <div class="tournament-card-header">
+                            <img src="img/val.jpeg">
+                        </div>
+                        <div class="tournament-card-body">
+                            <h3>GC VALORANT Challengers Brazil 2025</h3>
+                            <ul class="tournament-info">
+                                <li><i class="fas fa-gamepad"></i> Jogo: Valorant</li>
+                                <li><i class="fas fa-trophy"></i> Prêmio: R$ 405.000,00</li>
+                                <li><i class="fas fa-calendar-alt"></i> Data: 06-12 de Junho, 2025</li>
+                                <li><i class="fas fa-users"></i> Formato: 5v5, Eliminação Simples</li>
+                            </ul>
+                            <a href="#" class="register-button">Inscreva-se Agora</a>
+                        </div>
+                    </div>
+                    <div class="tournament-card">
+                        <div class="tournament-card-header">
+                            <img src="img/Csgo.jpg" alt="Banner do jogo League of Legends">
+                        </div>
+                        <div class="tournament-card-body">
+                            <h3>Austin Major 2025</h3>
+                            <ul class="tournament-info">
+                                <li><i class="fas fa-gamepad"></i> Jogo: Cs Go</li>
+                                <li><i class="fas fa-trophy"></i> Prêmio: $ 1,200,000</li>
+                                <li><i class="fas fa-calendar-alt"></i> Data: 14/04-22/06 de Junho, 2025</li>
+                                <li><i class="fas fa-users"></i> Formato: 5v5, Fase de Grupos + Playoffs</li>
+                            </ul>
+                            <a href="#" class="register-button">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="tournament-card">
+                        <div class="tournament-card-header">
+                            <img src="img/lol.jpeg" alt="Banner de um jogo de estratégia">
+                        </div>
+                        <div class="tournament-card-body">
+                            <h3>Circuito Aberto - Qualificatória Aberta</h3>
+                            <ul class="tournament-info">
+                                <li><i class="fas fa-gamepad"></i> Jogo: League of Legends</li>
+                                <li><i class="fas fa-trophy"></i> Prêmio: R$ 20.000 + V-Bucks</li>
+                                <li><i class="fas fa-calendar-alt"></i> Data: 24-26 de Junho, 2025</li>
+                                <li><i class="fas fa-users"></i> Formato: 5v5, Eliminação Simples</li>
+                            </ul>
+                            <a href="#" class="register-button">Inscrições Abertas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-about">
+                <h3>Universo Gamer</h3>
+                <p>Sua central definitiva para tudo sobre o mundo dos jogos de PC. Junte-se à nossa comunidade!</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Junte-se à nossa Newsletter</h3>
+                <p>Receba as últimas notícias, lançamentos e ofertas diretamente no seu e-mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="submit">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

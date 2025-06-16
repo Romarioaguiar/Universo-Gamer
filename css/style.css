@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00aaff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+.header {
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #282828;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #00aaff;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 25px;
+}
+
+.menu a {
+    font-size: 16px;
+    font-weight: 700;
+}
+ 
+.header-buttons .btn {
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+    background-color: #0088cc;
+}
+
+/* Main Banner */
+.main-banner {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Header offset */
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner-content h1 {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.banner-content p {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+}
+ 
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #00aaff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Game Highlights */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 170, 255, 0.3);
+}
+
+.game-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px 10px;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: #1a1a1a;
+}
+ 
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.testimonial-card {
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+ 
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+}
+
+.testimonial-text p {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.testimonial-text span {
+    font-weight: 700;
+    color: #00aaff;
+}
+
+/* --- NOVA SEÇÃO DE TORNEIOS --- */
+#tournaments {
+    display: none; /* Começa escondido */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-color: #121212;
+}
+
+#tournaments.visible {
+    display: block; /* Torna-se visível */
+    opacity: 1;
+}
+
+.tournaments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.tournament-card {
+    background-color: #1e1e1e;
+    border: 1px solid #282828;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.tournament-card-header {
+    position: relative;
+}
+
+.tournament-card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+ 
+.tournament-game-logo {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 3px solid #00aaff;
+}
+
+.tournament-card-body {
+    padding: 40px 20px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tournament-card-body h3 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+ 
+.tournament-info {
+    list-style: none;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tournament-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+}
+
+.tournament-info i {
+    color: #00aaff;
+}
+
+.register-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #00aaff;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #0088cc;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1e;
+    padding: 60px 0;
+    border-top: 1px solid #282828;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-about h3, .footer-links h3, .footer-newsletter h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+ 
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+}
+ 
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: #282828;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+ 
+.newsletter-form button:hover {
+    background-color: #0088cc;
+}
+ 
+/* Responsive Design */
+@media (max-width: 992px) {
+    .games-grid, .tournaments-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .header .menu, .header .header-buttons {
+        display: none; /* Simplificação para mobile, idealmente um menu hamburguer */
+    }
+    .banner-content h1 {
+        font-size: 48px;
+    }
+    .banner-content p {
+        font-size: 18px;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .newsletter-form {
+        justify-content: center;
+    }
+    .games-grid, .tournaments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Esconde o botão no desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu como flex em desktop */
+.main-nav .menu {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 1001;
+  }
+
+  .main-nav .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1em;
+    z-index: 1000;
+  }
+
+  .main-nav .menu.active {
+    display: flex;
+  }
+}
